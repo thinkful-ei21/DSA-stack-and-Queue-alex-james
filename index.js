@@ -1,4 +1,7 @@
 'use strict';
+
+const util = require('util');
+
 class _Node {
     constructor(data, next) {
         this.data = data;
@@ -36,7 +39,7 @@ class Stack {
 }
 
 function peek(stack) {
-    // console.log(stack.top.data)
+    console.log(stack.top.data);
 }
 
 function display(stack) {
@@ -70,6 +73,31 @@ function is_palindrome(string) {
     return bool;
 }
 
+function matchingParens(expression) {
+    // A stack can be used to ensure that an arithmetic expression
+    // has balanced parentheses. Write a function that takes an
+    // arithmetic expression as an argument and returns the
+    // position in the expression where a parenthesis
+    // is missing or incorrect.
+    //  For version 1, the parentheses you need to consider are ( and ).
+    //  Finding a close parenthesis without an
+    // open parenthesis is an error (report the location of the close);
+    // reaching the end of the string while still "holding" an
+    // open parenthesis is also an error (report the location of the open)
+}
+
+function sortStack(stack) {
+    // Write a program to sort a stack such that
+    //  the smallest items are on the top (in ascending order)
+    // You can use an additional stack, but you
+    // may not use any other data structure
+    //(such as an array, or linked list).
+    // create a new stack
+    // loop through original stack and find the maxmum
+
+    console.log(stack);
+}
+
 function main() {
     let starTrek = new Stack();
     starTrek.push('Kirk');
@@ -80,11 +108,12 @@ function main() {
     peek(starTrek);
     // display(starTrek)
 
-    starTrek.pop();
-    starTrek.pop();
-    display(starTrek);
+    // starTrek.pop();
+    // starTrek.pop();
+    // display(starTrek);
 
-    console.log(is_palindrome('A man, a plan, a canal: Panama'));
+    // console.log(is_palindrome('A man, a plan, a canal: Panama'));
+    sortStack(starTrek);
 }
 
 main();
